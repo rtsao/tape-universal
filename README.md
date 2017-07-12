@@ -1,5 +1,7 @@
 # tape-universal
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rtsao/tape-universal.svg)](https://greenkeeper.io/)
+
 `tape` replacement with browser version that doesn't require Node.js built-ins
 
 ### Why?
