@@ -1,0 +1,29 @@
+{
+  "name": "tape-universal",
+  "version": "4.7.0",
+  "description": "tape replacement with browser version that doesn't require Node.js built-ins",
+  "author": "Ryan Tsao <ryan.j.tsao@gmail.com>",
+  "homepage": "https://github.com/rtsao/tape-universal",
+  "repository": "git@github.com:rtsao/tape-universal.git",
+  "bugs": "https://github.com/rtsao/tape-universal/issues",
+  "main": "./dist/node.cjs.js",
+  "module": "./dist/node.es.js",
+  "browser": {
+    "./dist/node.cjs.js": "./dist/browser.cjs.js",
+    "./dist/node.es.js": "./dist/browser.es.js"
+  },
+  "dependencies": {
+    "tape": "4.7.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.45.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "scripts": {
+    "prepublish": "rollup -c rollup.config.node.js -m && rollup -c rollup.config.browser.js -m"
+  },
+  "license": "MIT"
+}
